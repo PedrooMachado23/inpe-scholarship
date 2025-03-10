@@ -22,6 +22,6 @@ jobs:
           git submodule update --remote ${{ github.event.client_payload.smd_name }}
           git add ${{ github.event.client_payload.smd_name }}        
           git config --global user.name ${{ github.event.client_payload.user_name }}
-          git config --global user.email %{{ github.event.client_payload.user_email }}
+          git config --global user.email ${{ github.event.client_payload.user_email }}
           git commit -m 'Updating submodules ${{ github.event.client_payload.smd_name }} [skip ci]'
           git push 
